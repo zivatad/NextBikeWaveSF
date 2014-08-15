@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Next Bikeway Wave San Francisco</title>
+    
+    <!--General Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!--Fonts Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+	
+	<!-- Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<!--jQuery Library-->
+	<script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+    
+    <!--jQuery UI Accordion Panel Library-->
+    <link href="css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+	
+	<!--D3 Library-->
+	<script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	<!-- Load Leaflet Library from CDN-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    
+    <!-- ESRI Leaflet Plug-in from CDN-->
+	<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+
+  </head>
+  
+  <body>
+		
+	<!-- Header -->
+	
+	<header class="container-fluid">
+	
+	    <!-- Bootstrap grid system-->	
+		<div id="headerContents" class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0">
+				<h1>SF's Next Wave of Bikeways</h1>
+				<p id="description"><em><a id="surveyLink" href="http://www.sfbike.org/main/survey-what-should-be-the-next-generation-of-bikeways-in-san-francisco/">Survey</a></em> results geographically visualized by District.</p>	
+			</div>
+		</div>
+		
+	</header>
+	
+	<! Header ends -->
+	
+	<!-- MAIN CONTENTS start here-->
+	
+	<div id="mainBackground">
+	
+		<section class="container-fluid">
+					<!-- Bootstrap grid system-->
+			<div class="row">
+			        
+			    <!-- Map content -->
+			        
+				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0 col-lg-10 col-lg-offset-0" >						  
+					<div id="mapContainer"><!-- Maps come here --></div>
+				</div>
+				
+				<!-- Map content ends -->	
+				
+				<!-- Control panel (Accordion panel) * Add accordion panel for layer controls when add more layers on the map -->
+				<div class="col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-2 col-lg-offset-0" id="Control">							
+					<div id="accordion">
+					
+					    <!--Accordion panel1 -->
+						<h2>Overlay Layers</h2>
+						<div>
+							<ul id="overlaylayers">
+								<li><a href="#" id="toggle-NBN" class="active_NBN">New Bike Network</a></li>
+								<li><a href="#" id="toggle-UBN" class="active_UBN">Upgraded Bike Network</a></li>
+								<li class="lastContents"><a href="#" id="toggle-CBN" class="active_CBN" >Current Bike Network</a></li>
+							</ul>
+						</div>
+						
+						<!-- Accordion panel2(Legend) -->
+						<h2>Legend</h2>
+							<div id="legend-detail">
+								<div id="legendContents">
+								
+									<h3>New Bike Network</h3>
+											
+									<div class="legendTitle">
+										<p> Survey Count </p>
+									</div>
+										 
+									<svg class="legendObject" width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(253, 174, 107)" stroke-width="3" /></svg><span class="legendLabel">0 - 40</span></br>
+									<svg class="legendObject" width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(253, 141, 60)" stroke-width="3" /></svg><span class="legendLabel">41 - 80</span></br>
+									<svg class="legendObject" width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(241, 105, 19)" stroke-width="3" /></svg><span class="legendLabel">81 - 120</span></br>
+									<svg class="legendObject" width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(217, 72, 1)" stroke-width="3" /></svg><span class="legendLabel">121 - 160</span></br>
+									<svg class="legendObject" width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(140, 45, 4)" stroke-width="3" /></svg><span class="legendLabel">161 - 200</span></br>
+							
+									        
+									<h3>Upgrade Bike Network</h3>
+											
+									<div class="legendTitle">
+										<p> Survey Count </p>
+									</div>
+									
+										<svg width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(188, 189, 220)" stroke-width="3" /></svg><span class="legendLabel">0 - 55</span></br>
+										<svg width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(158, 154, 200)" stroke-width="3" /></svg><span class="legendLabel">56 - 110</span></br>
+										<svg width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(128, 125, 186)" stroke-width="3" /></svg><span class="legendLabel">111 - 165</span></br>
+										<svg width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(106, 81, 163)" stroke-width="3" /></svg><span class="legendLabel">166 - 220</span></br>
+										<svg width="30" height="20"><path d="M0 14 L30 14 Z" stroke="rgb(74, 20, 134)" stroke-width="3" /></svg><span class="legendLabel">221 - 275</span></br>
+					
+											
+									<h3>Current Bike Network</h3>
+									
+									<div id="lastlegendTitle">
+									</div>
+											
+									<svg width="40" height="20"><path d="M0 14 L40 14 Z" stroke="rgb(127, 195, 28)" stroke-width="9" opacity="0.4" stroke-linecap="round" stroke-dasharray="1, 15"/></svg><span class="legendLabel">Bike Route</br>
+									<svg width="40" height="20"><path d="M0 14 L40 14 Z" stroke="rgb(127, 195, 28)" stroke-width="9" opacity="0.4" stroke-linecap="square" stroke-dasharray="10, 14"/></svg><span class="legendLabel">Bike Lane</span></br>
+									<svg width="40" height="20"><path d="M0 14 L40 14 Z" stroke="rgb(127, 195, 28)" stroke-width="9" opacity="0.4"/></svg><span class="legendLabel">Bike Path</span></br>
+								</div>									
+							</div>
+						</div>
+					</div>
+				</div>				
+			</section>  
+	    <div id="info"></div>
+     	</div>
+        <!-- Main contents end -->    	
+	<!--FOOTER -->	
+	<footer>
+		<div id="footer">
+			<div id="footerContents"></div>
+		</div>
+	</footer>
+
+	
+	<!-- Reference Javascript files-->
+    <script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	    
+    <!-- Bootstrap libraries -->
+    
+    <script src="js/lib/bootstrap.min.js"></script>
+ 
+  </body>
+</html>

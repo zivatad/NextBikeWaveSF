@@ -1,0 +1,363 @@
+/* Reset & Setting */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, figure {
+	margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+
+/* Open Sans Regular 14px to all elements */
+
+*{
+font-family: "Open Sans";
+font-size: 14px;
+font-weight: 400;
+font-style: normal;
+color: #404040;
+}
+
+/* Take off underlines for links */
+a{
+text-decoration: none;
+}
+
+/* Header */ 
+
+header{
+position: fixed !important;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 10vh;
+background-color: #ffffff;
+margin: 0;
+-webkit-box-shadow: 0 4px 0 #cccccc;
+-moz-box-shadow: 0 4px 0 #cccccc;
+box-shadow: 0 4px 0 #cccccc;
+ box-shadow: 0 1px 8px #333333;
+    -moz-box-shadow: 0 1px 8px #333333; /* Firefox */
+    -webkit-box-shadow: 0 1px 8px #333333; /* Safari, Chrome*/
+z-index: 9999;
+}
+
+/* Header Contents */
+
+#headerContents{
+width: 100%;
+height: auto;
+z-index: 9999;
+}
+
+/* Main Title */
+
+div h1{
+font-size: 40px;
+font-family: 'open_sans_condensedbold';
+}
+
+
+em a{
+font-weight: bold;
+font-weight: 700;
+font-style: normal;
+}
+
+em a:hover{
+opacity: 0.7;
+text-decoration: none;
+}
+
+/* Main contents layout (Map/Accordion Panel) */
+
+#mainBackground{
+margin-top: 12vh;
+height: 81vh;
+margin-bottom: 2vh;
+}
+
+/* Map Container */
+
+#mapContainer{
+border: 1px solid #404040;
+}
+
+#control{
+margin-bottom: 2vh;
+}
+
+/* Footer */
+
+#footer{
+height: 5vh;
+width: 100%;
+position: fixed !important;
+position: absolute;
+bottom: 0;
+left: 0;
+z-index: 9999;
+background-color: #404040;
+}
+
+/* Footer Contents */
+
+#footerContents{
+height: 5vh;
+}
+
+
+/* Styling for toggle buttons in the accordion panel */
+
+#ul_menu{
+position:relative;
+position:absolute;
+bottom: 0px;
+width:100%;
+height:80px;
+}
+
+#ul_menu li{
+width:auto;
+clear: both;
+float:none;
+position:relative;
+position:absolute;
+bottom: 0px;
+list-style:none;
+}
+
+#ul_menu li span{
+width:auto;
+height: 30px;
+float:left;
+display:block;
+background: #404040;
+color: #ffffff;    
+padding-top: 7px;
+}
+
+ul.sub_list {
+bottom: 37px;
+left: 0px;
+position: absolute;
+padding-left:0;
+}
+
+#overlaylayers li{ 
+font-family: "Open Sans";
+font-size: 14px;
+font-weight: 700;
+font-style: normal;
+color: #404040;
+padding-top: 7px;
+padding-bottom: 7px;
+width: auto;
+border-bottom: 1px dotted #404040;
+margin-left: 35px;
+list-style:none;
+}
+
+
+#overlaylayers{
+margin-bottom: 0px;
+}
+
+#overlaylayers li a{
+text-decoration: none;
+color: orange;
+}
+
+#overlaylayers li.lastContents{
+border-bottom: 0px;
+}
+
+#overlaylayers li.lastContents a{
+color: #404040;
+}
+
+/* Styling for legend in the accordion panel*/
+
+#legend-detail{
+font-family: "Open Sans";
+font-size: 14px;
+font-weight: 700;
+font-style: normal;
+color: #404040;
+padding-bottom: 20px;
+margin-bottom: 10vh;
+}
+
+#legendContents{
+margin-left: 30px;
+}
+
+#legendContents h3{
+font-family: "Open Sans";
+font-size: 16px;
+font-weight: 700;
+font-style: normal;
+color: #404040;
+margin-bottom: 15px;
+}
+
+#legendContents p{
+font-family: "Open Sans";
+font-size: 10px;
+font-weight: 400;
+font-style: normal;
+color: #404040;
+margin-top: 5px;
+margin-left: 38px;
+margin-bottom: 2px;
+}
+
+.legendTitle{
+margin-bottom: 0px;
+border-top: 1px dotted #404040;
+}
+
+#lastlegendTitle{
+border-top: 1px dotted #404040;
+margin-bottom: 10px;
+}
+
+span.legendLabel{
+margin-left: 8px;
+}
+
+
+
+/* Styling for Current Bike Network SVG */
+
+																					
+.bikePath{
+stroke-width: 9px;
+stroke: rgb(127, 195, 28);
+stroke-linecap: square;
+opacity: 0.4;
+}
+
+.bikeRoute{
+stroke-width: 9px;
+stroke: rgb(127, 195, 28);
+stroke-linecap: round;
+stroke-dasharray: 1, 15;
+opacity: 0.4;
+}
+
+.bikeLane{
+stroke-width: 9px;
+stroke: (255, 92, 36);
+stroke: rgb(127, 195, 28);
+stroke-linecap: square;
+stroke-dasharray: 10, 14;
+opacity: 0.4;
+}
+
+
+/* Bike Network Toggle */
+.CurrentBN{
+opacity: 0;
+}
+
+/* Tooltips */
+#info{
+background:#fff; 
+border-top:3px solid #404040; 
+border-bottom:1px solid #404040; 
+color:#404040;
+display:none; 
+font-size:10px; 
+padding:10px 15px 5px 15px; 
+position:absolute; 
+width:auto; 
+z-index:9999;
+}
+
+
+#info p	{
+font-size:12px; 
+line-height:1.4; 
+margin:0 0 10px 0;
+}
+
+
+			
+/* Media Query (Change Layout according to the display size) */
+
+@media (min-width: 0px) {
+  div h1 {
+    font-size: 15px;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+  }  
+  em a, #description {
+  	font-size: 8px;
+  }
+  #mapContainer {
+    height: 50vh;
+    margin-bottom: 2vh;
+  }
+}
+
+@media (min-width: 768px) {
+  
+   div h1 {
+    font-size: 20px;
+    margin-top: 1vh;
+  }
+  em a, #description {
+  	font-size: 12px;
+  }
+   #mapContainer {
+    height: 60vh;
+    argin-bottom: 1.5vh;
+  }
+}
+
+@media (min-width: 992px) {
+   div h1 {
+    font-size: 30px;
+    margin-top: 1.5vh;
+  }
+  em a, #description {
+  	font-size: 14px;
+  }
+  #mapContainer {
+    height: 70vh;
+    argin-bottom: 2vh;
+  }
+}
+
+@media (min-width: 1200px) {
+   div h1 {
+    font-size: 40px;
+    margin-top: 2vh;
+  }  
+  em a, #description {
+  	font-size: 16px;
+  }
+   #mapContainer {
+    height: 81vh;
+  } 
+}
+
+
+
+
+
+
+
