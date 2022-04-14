@@ -52,6 +52,7 @@ box-shadow: 0 4px 0 #cccccc;
     -moz-box-shadow: 0 1px 8px #333333; /* Firefox */
     -webkit-box-shadow: 0 1px 8px #333333; /* Safari, Chrome*/
 z-index: 9999;
+height: auto;
 }
 
 /* Header Contents */
