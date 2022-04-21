@@ -38,7 +38,6 @@ text-decoration: none;
 
 header{
 position: fixed !important;
-position: absolute;
 top: 0;
 left: 0;
 width: 100%;
@@ -52,7 +51,7 @@ box-shadow: 0 4px 0 #cccccc;
     -moz-box-shadow: 0 1px 8px #333333; /* Firefox */
     -webkit-box-shadow: 0 1px 8px #333333; /* Safari, Chrome*/
 z-index: 9999;
-height: auto;
+height: 90px;
 }
 
 /* Header Contents */
@@ -85,9 +84,9 @@ text-decoration: none;
 /* Main contents layout (Map/Accordion Panel) */
 
 #mainBackground{
-margin-top: 12vh;
-height: 81vh;
-margin-bottom: 2vh;
+margin-top: 110px;
+height: calc(100% - 150px);
+margin-bottom: 20px;
 }
 
 /* Map Container */
@@ -97,13 +96,13 @@ border: 1px solid #404040;
 }
 
 #control{
-margin-bottom: 2vh;
+margin-bottom: 16px;
 }
 
 /* Footer */
 
 #footer{
-height: 5vh;
+height: 20px;
 width: 100%;
 position: fixed !important;
 position: absolute;
