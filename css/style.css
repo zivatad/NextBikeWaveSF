@@ -86,7 +86,7 @@ text-decoration: none;
 #mainBackground{
 margin-top: 110px;
 height: calc(100% - 150px);
-margin-bottom: 20px;
+margin-bottom: 40px;
 }
 
 /* Map Container */
@@ -96,7 +96,7 @@ border: 1px solid #404040;
 }
 
 #control{
-margin-bottom: 16px;
+margin-bottom: 20px;
 }
 
 /* Footer */
@@ -105,7 +105,6 @@ margin-bottom: 16px;
 height: 20px;
 width: 100%;
 position: fixed !important;
-position: absolute;
 bottom: 0;
 left: 0;
 z-index: 9999;
